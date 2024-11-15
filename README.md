@@ -15,7 +15,7 @@ Then, install required packages
 ```bash
 # These packages are required for the tool-games
 pip install pygame PyExecJS numpy scipy jupyter
-pip install pymunk==5.7.0
+pip install pymunk==5.7.0 # This is important, the latest version of pymunk is not compatible with the tool-games
 
 # Register the tool-games
 cd ./tool-games/environment/
@@ -40,5 +40,3 @@ By now, you should be able to run the default task display by:
 cd ./tool-games/environment/
 python make_basic_trial.py
 ```
-
-Due to pymunk's change, 'pm.Vec2d()' only receives two arguments instead of one. All such thing should be changed before running the code.
