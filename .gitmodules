@@ -1,0 +1,3 @@
+[submodule "tool-games"]
+	path = tool-games
+	url = https://github.com/k-r-allen/tool-games.git
