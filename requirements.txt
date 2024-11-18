@@ -1,0 +1,8 @@
+pygame
+PyExecJS
+numpy
+scipy
+jupyter
+pymunk==5.7.0
+matplotlib
+jupyter

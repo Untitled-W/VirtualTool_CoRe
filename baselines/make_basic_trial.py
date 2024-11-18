@@ -3,6 +3,7 @@ from pyGameWorld.viewer import demonstrateTPPlacement, drawWorld, drawTool
 import json
 import pygame as pg
 import cv2
+import os
 
 # Make the basic world
 pgw = PGWorld(dimensions=(600,600), gravity=200)
