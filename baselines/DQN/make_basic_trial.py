@@ -109,7 +109,7 @@ for i in range(20):
 '''
 # Load level in from json file
 # For levels used in experiment, check out Level_Definitions/
-json_dir = "./Trials/Original/"
+json_dir = "./tool-games/environment/Trials/Original/"
 tnm = "Basic"
 
 with open(json_dir+tnm+'.json','r') as f:
@@ -125,8 +125,41 @@ for i in range(20):
         print(success)
         if success is not None:
             print(reward_function(path_dict, goal_verts))
-            demonstrateTPPlacement(tp, 'obj1', (600 // 20 * i + 600 // 20 // 2, 600 // 20 * j + 600 // 20 // 2))
+            # demonstrateTPPlacement(tp, 'obj1', (600 // 20 * i + 600 // 20 // 2, 600 // 20 * j + 600 // 20 // 2))
 
 
 # View that placement
-demonstrateTPPlacement(tp, 'obj1', (200, 400))
+# demonstrateTPPlacement(tp, 'obj1', (200, 400))
+
+
+
+'''
+def count_success_rate():
+    Trial 2: Count success rate for every task if solve with brute force
+    from tqdm import tqdm
+    for mode in modes:
+        for tnm in tqdm(os.listdir(json_dir+mode)):
+            with open(json_dir+mode+tnm,'r') as f:
+                btr = json.load(f)
+            tp = ToolPicker(btr)
+            count = {'success': 0, 'fail': 0, 'None': 0}
+            
+            num = 10
+            for i in range(num):
+                for j in range(num):
+                    position = (tp.worldDims[0] // num * i + tp.worldDims[0] // num // 2, tp.worldDims[1] // num * j + tp.worldDims[1] // num // 2)
+                    path_dict, success, time_to_success = tp.observePlacementPath(toolname="obj1", position=position, maxtime=20.)
+                    if success:
+                        count['success'] += 1
+                    elif success is None:
+                        count['None'] += 1
+                    else:
+                        count['fail'] += 1
+                        
+            # save into txt
+            with open(f'results_{num:02}.txt', 'a') as f:
+                f.write(f'{tnm[:-5]:20}'+str(count)+'\n')
+            
+
+count_success_rate()
+'''
