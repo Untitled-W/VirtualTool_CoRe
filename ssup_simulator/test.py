@@ -8,8 +8,9 @@ from pyGameWorld.viewer import drawWorld, loadFromDict
 from ssup_simulator import RewardCNN
 from tqdm import trange
 
-model_ckpt = './bridge_ckpt/bridge_50.pth'
-scene_json = './Trials/Original/Bridge.json'
+model_ckpt = './catapult_ckpt/catapult_50.pth'
+scene_json = './Trials/Original/Catapult.json'
+scene = 'catapult'
 tool_choice = 1
 N_sample = 5000
 top_k = False
@@ -53,9 +54,9 @@ with open(file_dir, 'r') as f:
         if not top_k:
             cv2.circle(image, center=(int(600 * x), 599 - int(600 * y)), radius=4, color=(0, int(((np.clip(reward.cpu().item(), -1, 1) + 1) * 0.5) ** 2 * 255), int(((-np.clip(reward.cpu().item(), -1, 1) + 1) * 0.5) ** 2 * 255)), thickness=-1)
     if not top_k:
-        cv2.imwrite('./vis_catapult.png', image)
+        cv2.imwrite(f'./vis_{scene}.png', image)
     else:
         index = np.argsort(-reward_list)[:k]
         for idx in index:
             cv2.circle(image, center=(position_list[idx][0], 599 - position_list[idx][1]), radius=4, color=(0, int(((np.clip(reward_list[idx], -1, 1) + 1) * 0.5) ** 2 * 255), int(((-np.clip(reward_list[idx], -1, 1) + 1) * 0.5) ** 2 * 255)), thickness=-1)
-        cv2.imwrite('./max_catapult.png', image)
+        cv2.imwrite(f'./max_{scene}.png', image)
