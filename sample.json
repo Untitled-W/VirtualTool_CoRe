@@ -1,0 +1,499 @@
+{
+    "world": {
+        "dims": [
+            600,
+            600
+        ],
+        "bts": 0.01,
+        "gravity": 200,
+        "defaults": {
+            "density": 1,
+            "friction": 0.5,
+            "elasticity": 0.5,
+            "color": "black",
+            "bk_color": "white"
+        },
+        "objects": {
+            "_LeftWall": {
+                "type": "Poly",
+                "color": "black",
+                "density": 0,
+                "vertices": [
+                    [
+                        -1,
+                        -1
+                    ],
+                    [
+                        -1,
+                        601
+                    ],
+                    [
+                        1,
+                        601
+                    ],
+                    [
+                        1,
+                        -1
+                    ]
+                ]
+            },
+            "_BottomWall": {
+                "type": "Poly",
+                "color": "black",
+                "density": 0,
+                "vertices": [
+                    [
+                        -1,
+                        -1
+                    ],
+                    [
+                        -1,
+                        1
+                    ],
+                    [
+                        601,
+                        1
+                    ],
+                    [
+                        601,
+                        -1
+                    ]
+                ]
+            },
+            "_RightWall": {
+                "type": "Poly",
+                "color": "black",
+                "density": 0,
+                "vertices": [
+                    [
+                        599,
+                        -1
+                    ],
+                    [
+                        599,
+                        601
+                    ],
+                    [
+                        601,
+                        601
+                    ],
+                    [
+                        601,
+                        -1
+                    ]
+                ]
+            },
+            "_TopWall": {
+                "type": "Poly",
+                "color": "black",
+                "density": 0,
+                "vertices": [
+                    [
+                        -1,
+                        599
+                    ],
+                    [
+                        -1,
+                        601
+                    ],
+                    [
+                        601,
+                        601
+                    ],
+                    [
+                        601,
+                        599
+                    ]
+                ]
+            },
+            "Goal": {
+                "type": "Container",
+                "color": "black",
+                "density": 0,
+                "points": [
+                    [
+                        5,
+                        150
+                    ],
+                    [
+                        5,
+                        5
+                    ],
+                    [
+                        92,
+                        5
+                    ],
+                    [
+                        92,
+                        150
+                    ]
+                ],
+                "width": 10,
+                "innerColor": "green",
+                "outerColor": "black"
+            },
+            "LeftWall1": {
+                "type": "Poly",
+                "color": "black",
+                "density": 0,
+                "vertices": [
+                    [
+                        97,
+                        0
+                    ],
+                    [
+                        97,
+                        145
+                    ],
+                    [
+                        175,
+                        145
+                    ],
+                    [
+                        175,
+                        0
+                    ]
+                ]
+            },
+            "LeftWall2": {
+                "type": "Poly",
+                "color": "black",
+                "density": 0,
+                "vertices": [
+                    [
+                        97,
+                        145
+                    ],
+                    [
+                        97,
+                        152
+                    ],
+                    [
+                        146,
+                        152
+                    ],
+                    [
+                        146,
+                        145
+                    ]
+                ]
+            },
+            "RightWall1": {
+                "type": "Poly",
+                "color": "black",
+                "density": 0,
+                "vertices": [
+                    [
+                        471,
+                        0
+                    ],
+                    [
+                        471,
+                        145
+                    ],
+                    [
+                        600,
+                        145
+                    ],
+                    [
+                        600,
+                        0
+                    ]
+                ]
+            },
+            "RightWall2": {
+                "type": "Poly",
+                "color": "black",
+                "density": 0,
+                "vertices": [
+                    [
+                        515,
+                        145
+                    ],
+                    [
+                        515,
+                        152
+                    ],
+                    [
+                        600,
+                        284
+                    ],
+                    [
+                        600,
+                        145
+                    ]
+                ]
+            },
+            "BridgeL": {
+                "type": "Poly",
+                "color": "blue",
+                "density": 1,
+                "vertices": [
+                    [
+                        148,
+                        162
+                    ],
+                    [
+                        148,
+                        169
+                    ],
+                    [
+                        294,
+                        169
+                    ],
+                    [
+                        294,
+                        162
+                    ]
+                ]
+            },
+            "BridgeR": {
+                "type": "Poly",
+                "color": "blue",
+                "density": 1,
+                "vertices": [
+                    [
+                        296,
+                        162
+                    ],
+                    [
+                        296,
+                        169
+                    ],
+                    [
+                        513,
+                        169
+                    ],
+                    [
+                        513,
+                        162
+                    ]
+                ]
+            },
+            "Ball": {
+                "type": "Ball",
+                "color": "red",
+                "density": 1,
+                "position": [
+                    570,
+                    369
+                ],
+                "radius": 15
+            },
+            "NoiseBridge0_L": {
+                "type": "Poly",
+                "color": "blue",
+                "density": 1,
+                "vertices": [
+                    [
+                        129,
+                        382
+                    ],
+                    [
+                        129,
+                        392
+                    ],
+                    [
+                        254,
+                        392
+                    ],
+                    [
+                        254,
+                        382
+                    ]
+                ]
+            },
+            "NoiseBridge0_R": {
+                "type": "Poly",
+                "color": "blue",
+                "density": 1,
+                "vertices": [
+                    [
+                        256,
+                        382
+                    ],
+                    [
+                        256,
+                        392
+                    ],
+                    [
+                        381,
+                        392
+                    ],
+                    [
+                        381,
+                        382
+                    ]
+                ]
+            },
+            "NoiseBridge1_L": {
+                "type": "Poly",
+                "color": "blue",
+                "density": 1,
+                "vertices": [
+                    [
+                        109,
+                        328
+                    ],
+                    [
+                        109,
+                        335
+                    ],
+                    [
+                        189,
+                        335
+                    ],
+                    [
+                        189,
+                        328
+                    ]
+                ]
+            },
+            "NoiseBridge1_R": {
+                "type": "Poly",
+                "color": "blue",
+                "density": 1,
+                "vertices": [
+                    [
+                        191,
+                        328
+                    ],
+                    [
+                        191,
+                        335
+                    ],
+                    [
+                        271,
+                        335
+                    ],
+                    [
+                        271,
+                        328
+                    ]
+                ]
+            },
+            "NoiseBridge2_L": {
+                "type": "Poly",
+                "color": "blue",
+                "density": 1,
+                "vertices": [
+                    [
+                        36,
+                        121
+                    ],
+                    [
+                        36,
+                        135
+                    ],
+                    [
+                        183,
+                        135
+                    ],
+                    [
+                        183,
+                        121
+                    ]
+                ]
+            },
+            "NoiseBridge2_R": {
+                "type": "Poly",
+                "color": "blue",
+                "density": 1,
+                "vertices": [
+                    [
+                        185,
+                        121
+                    ],
+                    [
+                        185,
+                        135
+                    ],
+                    [
+                        332,
+                        135
+                    ],
+                    [
+                        332,
+                        121
+                    ]
+                ]
+            }
+        },
+        "blocks": {},
+        "constraints": {},
+        "gcond": {
+            "type": "SpecificInGoal",
+            "goal": "Goal",
+            "obj": "Ball",
+            "duration": 2
+        }
+    },
+    "tools": {
+        "obj1": [
+            [
+                [
+                    -30,
+                    -73
+                ],
+                [
+                    -30,
+                    72
+                ],
+                [
+                    30,
+                    72
+                ],
+                [
+                    30,
+                    -73
+                ]
+            ]
+        ],
+        "obj2": [
+            [
+                [
+                    -5,
+                    -73
+                ],
+                [
+                    -5,
+                    72
+                ],
+                [
+                    5,
+                    72
+                ],
+                [
+                    5,
+                    -73
+                ]
+            ]
+        ],
+        "obj3": [
+            [
+                [
+                    -30,
+                    -30
+                ],
+                [
+                    -30,
+                    30
+                ],
+                [
+                    30,
+                    30
+                ],
+                [
+                    30,
+                    -30
+                ]
+            ]
+        ]
+    },
+    "toolNames": [
+        "obj1",
+        "obj2",
+        "obj3"
+    ],
+    "sucText": "Get the red ball into the green goal"
+}
