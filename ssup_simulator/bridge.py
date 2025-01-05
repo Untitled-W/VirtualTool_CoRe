@@ -7,8 +7,8 @@ from pyGameWorld.viewer import drawWorld, loadFromDict
 from reward_function import reward_func
 import time
 
-file_dir = './Trials/Original/Bridge.json'
-N = 50000
+file_dir = '../tool-games/environment/Trials/Original'+'/Bridge.json'
+N = 500
 reward_list = np.zeros(N, dtype=np.float32)
 flag = 0
 start_time = time.time()
@@ -67,7 +67,7 @@ while True:
         if flag % 50 == 0:
             print(f'{flag:05d}', f'{100 * np.sum(reward_list[:flag] == 1.0) / flag:6.2f}%', f'{100 * np.sum(np.logical_not(reward_list[:flag] == 1.0)) / flag:6.2f}%')
             print(f'Average {flag / (time.time() - start_time):.2f}img/s')
-            print(f'Left {(time.time() - start_time) / flag * (50000 - flag):.2f}s')
+            print(f'Left {(time.time() - start_time) / flag * (N - flag):.2f}s')
         np.save('./bridge.npy', reward_list)
     
         if success == True:
