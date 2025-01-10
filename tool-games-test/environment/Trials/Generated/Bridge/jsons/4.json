@@ -1,0 +1,29 @@
+{
+    "world": 
+    {
+        "dims": [600, 600], "bts": 0.01, "gravity": 200, 
+        "defaults": {"density": 1, "friction": 0.5, "elasticity": 0.5, "color": "black", "bk_color": "white"}, 
+        "objects": 
+        {
+            "_LeftWall": {"type": "Poly", "color": "black", "density": 0, "vertices": [[-1, -1], [-1, 601], [1, 601], [1, -1]]}, 
+            "_BottomWall": {"type": "Poly", "color": "black", "density": 0, "vertices": [[-1, -1], [-1, 1], [601, 1], [601, -1]]}, 
+            "_RightWall": {"type": "Poly", "color": "black", "density": 0, "vertices": [[599, -1], [599, 601], [601, 601], [601, -1]]}, 
+            "_TopWall": {"type": "Poly", "color": "black", "density": 0, "vertices": [[-1, 599], [-1, 601], [601, 601], [601, 599]]}, 
+            "Goal": {"type": "Container", "color": "black", "density": 0, "points": [[5, 145], [5, 5], [95, 5], [95, 145]], "width": 10, "innerColor": "green", "outerColor": "black"}, 
+            "LeftWall1": {"type": "Poly", "color": "black", "density": 0, "vertices": [[100, 0], [100, 140], [200, 140], [200, 0]]}, 
+            "LeftWall2": {"type": "Poly", "color": "black", "density": 0, "vertices": [[100, 140], [100, 150], [120, 150], [120, 140]]}, 
+            "RightWall1": {"type": "Poly", "color": "black", "density": 0, "vertices": [[400, 0], [400, 140], [600, 140], [600, 0]]}, 
+            "RightWall2": {"type": "Poly", "color": "black", "density": 0, "vertices": [[450, 140], [450, 150], [600, 350], [600, 140]]}, 
+            "BridgeL": {"type": "Poly", "color": "blue", "density": 1, "vertices": [[122, 160], [122, 170], [299, 170], [299, 160]]}, 
+            "BridgeR": {"type": "Poly", "color": "blue", "density": 1, "vertices": [[301, 160], [301, 170], [448, 170], [448, 160]]}, 
+            "Ball": {"type": "Ball", "color": "red", "density": 1, "position": [550, 450], "radius": 15}}, 
+            "blocks": {}, "constraints": {}, 
+            "gcond": {"type": "SpecificInGoal", "goal": "Goal", "obj": "Ball", "duration": 2}}, 
+    "tools": {
+        "obj1": [[[-30, -70], [-30, 70], [30, 70], [30, -70]]], 
+        "obj2": [[[-5, -45], [-5, 45], [5, 45], [5, -45]]], 
+        "obj3": [[[-30, -30], [-30, 30], [30, 30], [30, -30]]]
+    }, 
+    "toolNames": ["obj1", "obj2", "obj3"], 
+    "sucText": "Get the red ball into the green goal"
+}
